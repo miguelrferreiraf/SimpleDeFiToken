@@ -267,20 +267,3 @@ node_modules
 * O projeto é didático — **não** use o contrato tal qual em mainnet sem auditoria.
 * `transferWithAutoBurn` queima tokens do remetente com `_burn(msg.sender, ...)` — pense consequências de contabilidade, relatórios e expectativas do usuário.
 * Se pretende subir para mainnet, habilite otimização do compilador, fixe `solidity` com metadata e faça auditoria de segurança (reentrância, overflow, pausabilidade, renúncia de propriedade).
-
----
-
-## 9 — Checklist para publicar no GitHub (boa prática)
-
-1. Verificar `.gitignore` (adicionar `.env`, `deployedAddress.json`, `node_modules`, `artifacts`, `cache`).
-2. Incluir `README.md` (este).
-3. Remover chaves/test data sensíveis.
-4. Incluir `CONTRIBUTING.md` eventualmente (como rodar testes, padrão de commits).
-
----
-
-## 10 — Extras (se quiser otimizar agora)
-
-* Adicionar `hardhat-gas-reporter` para relatórios de gas mais ricos e/ou converter para saída em USD (configurar preço ETH).
-* Adicionar `eslint`/`prettier` e `solhint` para contrato Solidity.
-* Automatizar deploy/verify com GitHub Actions (CI).
